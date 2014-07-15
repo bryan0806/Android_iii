@@ -51,7 +51,7 @@ public class MainActivity extends Activity {
 
 		public void onClick(View v) {
 			// 將view 轉成 double 的過程
-			try {
+			try { // 把想要try ...catch 的內容 選起來 按右鍵 選擇 "surround with.."-> try..catch就可以設定
 				DecimalFormat nf = new DecimalFormat("0.00");
 				
 				
@@ -74,7 +74,7 @@ public class MainActivity extends Activity {
 				}
 				
 				openOptionsDialog(); // 增加對話框與Toast短暫留言
-			} catch (NumberFormatException e) {
+			} catch (NumberFormatException e) { // 程式自動會找你剛剛選的內容 給定一個接收類別 這邊因為式處理double所以給NumberFormatException
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			} catch (Exception e){
@@ -89,14 +89,14 @@ public class MainActivity extends Activity {
     private void openOptionsDialog(){
     	Toast.makeText(MainActivity.this, "(跳出)計算器", Toast.LENGTH_LONG).show();
     	
-    	new AlertDialog.Builder(MainActivity.this)
+    	new AlertDialog.Builder(MainActivity.this) //接下來的每一行回傳值都是Builder物件 所以可以一條龍的接續設定下去完成這個對話框
     	.setTitle(R.string.about_title)
     	.setMessage(R.string.about_msg)
     	.setPositiveButton("確認", new DialogInterface.OnClickListener() {
 			
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
-				// TODO Auto-generated method stub
+				// 函式裡面寫空值讓她不動作 只有跳出此對話框
 				
 			}
 		})
