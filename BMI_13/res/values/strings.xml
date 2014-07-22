@@ -9,5 +9,5 @@
     <string name="bmi_result">你的BMI值是</string>
     <string name="about_title">關於 Android BMI</string>
     <string name="about_msg">安卓BMI計算器</string>
-
+	<string name="homepage_label">首頁</string>
 </resources>
