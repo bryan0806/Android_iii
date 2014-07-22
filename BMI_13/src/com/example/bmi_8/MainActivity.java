@@ -5,7 +5,9 @@ import java.text.DecimalFormat;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.view.View.OnClickListener; // 一開始自動import 錯誤 import 到另外一個onclicklistener!! 要注意是哪一個
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -98,6 +100,16 @@ public class MainActivity extends Activity {
 			public void onClick(DialogInterface dialog, int which) {
 				// 函式裡面寫空值讓她不動作 只有跳出此對話框
 				
+			}
+		})
+		.setNegativeButton(R.string.homepage_label, new DialogInterface.OnClickListener() { //增加另外一顆按鈕
+			
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				// TODO Auto-generated method stub
+				Uri uri = Uri.parse("http://tw.yahoo.com/"); //網址
+				Intent intent = new Intent(Intent.ACTION_VIEW,uri); // 把網址包入intent
+				startActivity(intent); // 執行intent
 			}
 		})
 		.show();
