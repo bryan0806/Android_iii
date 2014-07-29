@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="advice_heavy">太重了歐</string>
+    <string name="advice_light">吃多一點歐</string>
+    <string name="advice_average">剛好歐</string>
+    
+</resources>
